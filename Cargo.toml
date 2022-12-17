@@ -1,0 +1,25 @@
+[package]
+name = "scylla-aws-keyspaces-authenticator"
+version = "0.1.0"
+edition = "2021"
+description = "This crate provides a simple to use AuthenticatorProvider implementation for scylla crate that works with AWS KeySpaces for Cassandra service."
+repository = "https://github.com/infr-dev/scylla-aws-keyspaces-authenticator"
+readme = "./README.md"
+keywords = ["scylla", "cassandra", "aws"]
+categories = ["database"]
+homepage = "https://github.com/infr-dev/scylla-aws-keyspaces-authenticator"
+license = "MIT"
+
+[dependencies]
+scylla = "0.7"
+async-trait = "0.1"
+chrono = "0.4"
+ring = "0.16"
+data-encoding = "2"
+aws-config = "0.52"
+aws-types = "0.52"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread"] }
+scylla = { version = "0.7", features = ["ssl"] }
+openssl = "0.10"
